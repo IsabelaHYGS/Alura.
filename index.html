@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroSinto - Painel Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🌱 AgroSinto</div>
+        <p>Agrinho 2026: Tecnologia a serviço do equilíbrio ambiental</p>
+    </header>
+
+    <main class="container">
+        <section class="introducao">
+            <h2>Tecnologia contra o Desperdício</h2>
+            <p>O equilíbrio entre produzir mais e proteger a natureza está no gerenciamento de recursos. Este painel simula sensores de umidade e nutrientes instalados no solo, ajudando o produtor a irrigar apenas quando necessário.</p>
+        </section>
+
+        <section class="dashboard">
+            <div class="card card-verde">
+                <h3>Umidade do Solo</h3>
+                <p class="sensor-valor" id="valor-umidade">42%</p>
+                <span class="status" id="status-umidade">Ideal</span>
+            </div>
+            
+            <div class="card card-azul">
+                <h3>Economia de Água</h3>
+                <p class="sensor-valor" id="valor-economia">1.250L</p>
+                <span>Salvos este mês</span>
+            </div>
+        </section>
+
+        <section class="simulador">
+            <h3>Simulador de Diagnóstico de Talhão (Lote de Terra)</h3>
+            <p>Insira os dados atuais do lote para receber o relatório de manejo sustentável:</p>
+            
+            <form id="form-agro">
+                <div class="form-group">
+                    <label for="tipo-solo">Tipo de Cultivo:</label>
+                    <select id="tipo-solo">
+                        <option value="graos">Grãos (Soja/Milho)</option>
+                        <option value="hortaliças">Hortaliças</option>
+                        <option value="frutas">Fruticultura</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="umidade-input">Umidade Atual do Solo (%):</label>
+                    <input type="number" id="umidade-input" min="0" max="100" placeholder="Ex: 25" required>
+                </div>
+
+                <button type="button" onclick="calcularManejo()">Gerar Recomendação</button>
+            </form>
+
+            <div id="resultado-painel" class="resultado-oculto">
+                <h4>📋 Diagnóstico do Sistema:</h4>
+                <p id="texto-resultado"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Projeto EcoAgro - Desenvolvido para o Programa Agrinho | Ensino Médio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
