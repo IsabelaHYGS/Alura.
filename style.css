@@ -1,0 +1,162 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f4f1;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1b5e20;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header .logo {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Container Principal */
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Dashboard de Sensores */
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-top: 5px solid #4caf50;
+}
+
+.card-azul {
+    border-top-color: #2196f3;
+}
+
+.sensor-valor {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #1b5e20;
+}
+
+.card-azul .sensor-valor {
+    color: #0d47a1;
+}
+
+.status {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Formulário e Simulador */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+select, input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+select:focus, input:focus {
+    border-color: #4caf50;
+}
+
+button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+/* Área de Resultado Dinâmico */
+.resultado-oculto {
+    display: none;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-left: 5px solid #2e7d32;
+    background-color: #f4f9f4;
+    border-radius: 4px;
+}
+
+.resultado-visivel {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade Básica para Celular */
+@media (max-width: 600px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}
